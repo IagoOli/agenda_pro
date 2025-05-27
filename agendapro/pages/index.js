@@ -234,7 +234,7 @@ const CalendlyClone = () => {
             <div className="flex justify-between h-16">
               <div className="flex items-center">
                 <Calendar className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">lincros Agenda</span>
+                <span className="ml-2 text-xl font-bold text-gray-900">Lincros Agenda</span>
                 <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Dashboard</span>
               </div>
               <div className="flex items-center space-x-4">
