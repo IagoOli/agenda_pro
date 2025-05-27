@@ -3,28 +3,28 @@ import { Calendar, Clock, Users, Settings, Mail, Video, CheckCircle, ArrowLeft, 
 
 const CalendlyClone = () => {
   const [currentView, setCurrentView] = useState('user-dashboard'); // 'user-dashboard' ou 'public-booking'
-  const [selectedUserId, setSelectedUserId] = useState('joao-silva');
+  const [selectedUserId, setSelectedUserId] = useState('iago_oliveira');
   
   // Dados do usuário logado (visão interna)
   const [currentUser, setCurrentUser] = useState({
-    id: 'joao-silva',
-    name: 'João Silva',
-    email: 'joao.silva@empresa.com',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-    role: 'Consultor Senior',
-    company: 'Empresa LTDA'
+    id: 'iago_oliveira',
+    name: 'Iago de Oliveira',
+    email: 'iago.oliveira@lincros.com',
+    avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQFs42OVDI03zw/profile-displayphoto-shrink_200_200/B4DZXom6H3HIAc-/0/1743364268918?e=1753920000&v=beta&t=Xce5knDt1YLuKkdje9eFOTpRXzJ40TUIAT_IOSvW95o',
+    role: 'Consultor de Dados',
+    company: 'Lincros'
   });
 
   // Dados dos usuários disponíveis para agendamento público
   const [users, setUsers] = useState({
-    'joao-silva': {
-      id: 'joao-silva',
-      name: 'João Silva',
-      email: 'joao.silva@empresa.com',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-      role: 'Consultor Senior',
-      company: 'Empresa LTDA',
-      bio: 'Especialista em estratégia digital com mais de 10 anos de experiência.',
+    'iago_oliveira': {
+      id: 'iago_oliveira',
+      name: 'Iago de Oliveira',
+      email: 'iago.oliveira@lincros.com',
+      avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQFs42OVDI03zw/profile-displayphoto-shrink_200_200/B4DZXom6H3HIAc-/0/1743364268918?e=1753920000&v=beta&t=Xce5knDt1YLuKkdje9eFOTpRXzJ40TUIAT_IOSvW95o',
+      role: 'Consultor de Dados',
+      company: 'Lincros',
+      bio: 'Especializado em transformar Dados em Insights',
       timezone: 'America/Sao_Paulo'
     },
     'maria-santos': {
@@ -40,7 +40,7 @@ const CalendlyClone = () => {
   });
   
   const [meetingTypes, setMeetingTypes] = useState({
-    'joao-silva': [
+    'iago_oliveira': [
       {
         id: 1,
         title: 'Consulta de 30 minutos',
@@ -92,7 +92,7 @@ const CalendlyClone = () => {
   });
 
   const [availability, setAvailability] = useState({
-    'joao-silva': {
+    'iago_oliveira': {
       monday: { active: true, start: '09:00', end: '17:00' },
       tuesday: { active: true, start: '09:00', end: '17:00' },
       wednesday: { active: true, start: '09:00', end: '17:00' },
@@ -115,7 +115,7 @@ const CalendlyClone = () => {
   const [appointments, setAppointments] = useState([
     {
       id: 1,
-      userId: 'joao-silva',
+      userId: 'iago_oliveira',
       title: 'Reunião com Maria Santos',
       date: '2025-05-28',
       time: '14:00',
@@ -127,7 +127,7 @@ const CalendlyClone = () => {
     },
     {
       id: 2,
-      userId: 'joao-silva',
+      userId: 'iago_oliveira',
       title: 'Call com Pedro Oliveira',
       date: '2025-05-29',
       time: '10:30',
@@ -234,7 +234,7 @@ const CalendlyClone = () => {
             <div className="flex justify-between h-16">
               <div className="flex items-center">
                 <Calendar className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">AgendaPro</span>
+                <span className="ml-2 text-xl font-bold text-gray-900">lincros Agenda</span>
                 <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Dashboard</span>
               </div>
               <div className="flex items-center space-x-4">
